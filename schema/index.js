@@ -1,8 +1,8 @@
 const { GraphQLObjectType, GraphQLString, GraphQLInt, GraphQLSchema } = require('graphql')
 
-const types = require('./types/index.js')
-const services = require('./services/index.js')
-const models = require('./models/index.js')
+const types = require('../types/index.js')
+const services = require('../services/index.js')
+const models = require('../models/index.js')
 
 const Link = models.link
 const Membership = models.membership
