@@ -1,3 +1,4 @@
+
 # Sinar API GraphQL
 
 Sinar API integration with GraphQL.
@@ -199,3 +200,4 @@ The following query will get a single item with the particular id.
 2. The naming for 'persons' should be changed to 'people'
 3. Unable to identify the schema for the 'on_behalf_of' resource
 4. Circular dependency due to resources keep referencing each other
+
