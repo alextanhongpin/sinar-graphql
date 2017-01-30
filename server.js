@@ -2,6 +2,7 @@ const express = require('express')
 const graphqlHTTP = require('express-graphql')
 const path = require('path')
 const request = require('request')
+const schema = require('./schema/index.js')
 // Construct a schema, using GraphQL schema language
 // var schema = buildSchema(`
 //   type Base {
@@ -14,12 +15,10 @@ const request = require('request')
 //   }
 // `)
 
-const schemaBase = require('./schema.js')
-
 const app = express()
 
 app.use('/graphql', graphqlHTTP({
-  schema: schemaBase,
+  schema: schema,
   graphiql: true
 }))
 
