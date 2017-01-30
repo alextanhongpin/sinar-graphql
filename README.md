@@ -3,7 +3,7 @@
 
 Sinar API integration with GraphQL.
 
-```
+```bash
 $ npm install
 $ npm start
 ```
@@ -13,7 +13,7 @@ $ npm start
 
 ## Counts
 
-```
+```javascript
 // Query
 {
     organizations {
@@ -34,7 +34,7 @@ $ npm start
 ## Pagination
 
 The query below shows how to obtain the results from page 2
-```
+```javascript
 // Query
 {
     organizations(page: 2) {
@@ -66,7 +66,7 @@ The query below shows how to obtain the results from page 2
 The query below will grab the a list of paginated (default limit to 10 items)
 results with the `id` and `name` field.
 
-```
+```javascript
 {
     organizations {
         results {
@@ -111,7 +111,7 @@ results with the `id` and `name` field.
 ## Get a single item
 
 The following query will get a single item with the particular id.
-```
+```javascript
 // Query
 {
     organizations(id:"5368583c19ee29270d8a9f9f") {
@@ -142,7 +142,7 @@ The following query will get a single item with the particular id.
 ## Get particular fields
 
 ## Metadata
-```
+```javascript
 // Query
 {
     organizations(language: "ms") {
@@ -161,7 +161,7 @@ The following query will get a single item with the particular id.
 
 ## Localization
 
-```
+```javascript
 // Available languages: `ms`, or `en`
 {
     organizations(language: "ms") {
@@ -173,7 +173,7 @@ The following query will get a single item with the particular id.
 
 
 # Client side fetching
-```
+```javascript
 // Using Fetch API on the client side to pull data
     const getPosts = fetch('/graphql', {
         method: 'POST',
