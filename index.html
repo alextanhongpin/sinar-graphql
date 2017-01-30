@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sinar API - GraphQL</title>
+</head>
+<body>
+
+<h1>Sinar API - GraphQL</h1>
+
+<p>Click <a href='/graphql'>here</a> to access the graphiql.</p>
+
+
+<script type="text/javascript">
+	
+
+	const getPosts = fetch('/graphql', {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json'
+		},
+		body: JSON.stringify({
+			query: `
+			{
+			  posts {
+			    results {
+			      id
+			    }
+			  }
+			}
+			`			
+		})
+	})
+
+	getPosts.then((body) => {
+		return body.json()
+	}).then((response) => {
+		console.log(response)
+	})
+</script>
+</body>
+</html>
